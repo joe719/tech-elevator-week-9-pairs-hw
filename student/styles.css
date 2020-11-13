@@ -9,12 +9,18 @@ nav ul {
 }
 
 nav ul li {
+    float: right;
+    margin: 20px;
     list-style: none;
-    width: 30%;
+    width: 10%;
     background-color: #00afef;
     border-radius: 5px;
     text-align: center;
     line-height: 50px;
+}
+
+header {
+    grid-area: h;
 }
 
 header img {
@@ -24,6 +30,10 @@ header img {
 header h1 {
     padding-left: 20px;
     padding-top: 10px;
+}
+
+main {
+    grid-area: m;
 }
 
 main img {
@@ -43,6 +53,33 @@ main, section, footer {
     background-color: #ffffff;
     border-radius: 5px;
     padding: 20px;
+    margin:5px;
+}
+
+#all-of-it {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-areas: 
+"h h"
+"m m"
+"p g"
+"f f"
+}
+
+#not-mains {
+
+}
+
+#popsicle-race {
+grid-area: p;    
+}
+
+#get-refreshed {
+grid-area: g;
+}
+
+footer {
+    grid-area: f;
 }
 
 .store-button { /* used for store link in "Get refreshed" section */
@@ -54,4 +91,17 @@ main, section, footer {
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+    #all-of-it {
+        grid-template-areas:
+            "h"
+            "m"
+            "p"
+            "g"
+            "f"
+            ;
+        grid-template-columns: 1fr;
+    }
 }
