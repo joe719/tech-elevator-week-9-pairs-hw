@@ -4,36 +4,45 @@ body {
 }
 
 nav ul {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #87CEEB;
     margin: 0;
-    padding: 20px 0 0 0;
+    padding: 0 0 0 0; 
+    flex-wrap: wrap;
 }
 
+
 nav ul li {
-    float: right;
+    width: 150px;
     margin: 20px;
     list-style: none;
-    width: 10%;
     background-color: #00afef;
     border-radius: 5px;
     text-align: center;
     line-height: 50px;
 }
 
+nav ul li:hover {
+    background-color: antiquewhite;
+}
+
 header {
-    grid-area: h;
+    display: flex;
 }
 
 header img {
+    
     height: 100px;
     width: auto;
 }
 header h1 {
     padding-left: 20px;
     padding-top: 10px;
-}
-
-main {
-    grid-area: m;
+  
+    
 }
 
 main img {
@@ -55,31 +64,26 @@ main, section, footer {
     padding: 20px;
     margin:5px;
 }
-
-#all-of-it {
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-areas: 
-"h h"
-"m m"
-"p g"
-"f f"
+input[type=text], select {
+  width: 400px;
+  padding: 12px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical;
 }
-
-#not-mains {
-
+textarea{
+  width: 500px;
+  padding: 12px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+ 
 }
-
-#popsicle-race {
-grid-area: p;    
-}
-
-#get-refreshed {
-grid-area: g;
-}
-
-footer {
-    grid-area: f;
+input[type=color] {
+    width: 400px;
+    margin-top: 6px; 
+    margin-bottom: 16px; 
 }
 
 .store-button { /* used for store link in "Get refreshed" section */
@@ -92,16 +96,17 @@ footer {
     text-align: center;
     text-transform: uppercase;
 }
-
-@media screen and (max-width: 768px) {
-    #all-of-it {
-        grid-template-areas:
-            "h"
-            "m"
-            "p"
-            "g"
-            "f"
-            ;
-        grid-template-columns: 1fr;
-    }
+.submitButton{
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px ;
+    color: #ffffff;
+    background-color: #00afef;
+    font-weight: bold;
+    text-align: center;
+    
 }
+.submitButton:hover {
+    background-color: antiquewhite;
+}
+
