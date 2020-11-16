@@ -53,7 +53,7 @@ main img {
 }
 
 main li:before {
-    content: '🍡';
+    content: 'ðŸ¡';
     margin-left: -31px;
     padding-right: 8px;
 }
@@ -109,4 +109,3 @@ input[type=color] {
 .submitButton:hover {
     background-color: antiquewhite;
 }
-
