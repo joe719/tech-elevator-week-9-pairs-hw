@@ -1,0 +1,61 @@
+#all-of-it {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    
+    grid-template-areas: 
+    "h1 h2"
+    "m m"
+    "f f"
+    }
+  
+   
+    #headerLeft{
+        grid-area: h1;
+        display: flex;
+        align-content: center;
+    }
+    #headerRight{
+        grid-area: h2;
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+    }
+    
+    #contact-us{
+    grid-area: m;
+    display: flex;
+    flex-direction: column;
+    }
+    
+    footer {
+    grid-area: f;
+    }
+
+    @media screen and (max-width: 800px) {
+        #all-of-it {
+            grid-template-areas:
+                "h1"
+                "h2"
+                "m"
+                "f";
+            grid-template-columns: 1fr;
+        }
+        nav ul {
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+        .submitButton{
+            width: 250px;
+        }
+        textarea, input[type=text], input[type=color], select {
+            width: 100%;
+        }
+        header h1 {
+            width: 50%;
+            padding-top: 0;
+        }
+        header img {
+           padding-top: 10px;
+        }
+    }    
